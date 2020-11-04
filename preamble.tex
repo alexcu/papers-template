@@ -1,0 +1,61 @@
+% Standard Packages
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+
+% Bibliography
+\usepackage[numbers,compress]{natbib}
+\renewcommand{\bibfont}{\footnotesize}
+
+% Graphics
+\usepackage{graphicx}
+\graphicspath{{images/}{../images/}}
+
+% Footnotes
+\usepackage[multiple]{footmisc} % Two footnotes at the one point
+\usepackage{tablefootnote} % Enables footnotes for tables
+\newcommand{\footnoteurl}[2]{\footnote{\url{#1} last accessed #2.}} % URL-cited footnotes
+\newcommand{\footnotenourl}[2]{\footnote{{#1} last accessed #2.}} % URL-cited footnotes
+
+% Tables -- Booktabs
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+\newcommand{\tablefit}[1]{\resizebox{\linewidth}{!}{#1}}
+\newcommand{\tablefitlandscape}[1]{\resizebox{1.2\paperwidth}{!}{#1}}
+
+% SI Unit for E (10^)
+\usepackage{siunitx}
+\sisetup{output-exponent-marker=\ensuremath{\mathrm{e}}}
+
+% TODOs -- Usage: \todo[Optional Introduced Text]{Todo Comments}
+%          Use the switch \TodosAre{on,new,highlight,off} to turn
+%          TODO comments on or off, or to keep new introduced text,
+%          optionally keep introduced text highlighted in blue.
+\def\TodosAre{on}
+\usepackage{xcolor}
+\usepackage{xstring}
+\newcommand{\todo}[2][]{
+        \IfStrEq{\TodosAre}{on}{
+        {\color{red} \slshape $\langle$~\textsc{\small\underline{todo}}: \textbf{#2}~{\color{darkgray}\textit{#1}}$\rangle$}
+    }{}
+    \IfStrEq{\TodosAre}{highlight}{
+        {\color{blue}{#1}}
+    }{}
+    \IfStrEq{\TodosAre}{new}{
+        #1
+    }{}
+}
+\newcommand{\tonote}[1]{\textbf{\sffamily\footnotesize[#1]}}
+\newcommand{\tocite}[1]{\tonote{cite:{#1}}}
+
+% Other Packages
+\usepackage{emptypage}  % Remove headers/footers from clearpages
+\usepackage{blindtext}  % Lorem ipsum filler text
+\usepackage{ragged2e}   % Justify switch
+\usepackage{pdflscape}  % Landscape pages
+\usepackage{multicol}   % Multiple columns
+\usepackage{gensymb}    % Extra symbols
+\usepackage{bold-extra} % Bold TT family
+\usepackage{hyperref}   % Hyperlinks - must be loaded before \cref
+\usepackage{cleveref}   % Referencing using \cref
+\usepackage{balance}    % Balance out last page (must call \balance)
