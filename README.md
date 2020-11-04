@@ -72,7 +72,7 @@ Use the `elsarticle` document class with the `review` option enabled for a Elsev
 \documentclass[review]{elsarticle} % <- Replace line 1
 \input{preamble}
 \begin{document}
-\input{frontmatter/IEEEcsmag}      % <- Replace line 7
+\input{frontmatter/elsarticle}     % <- Replace line 7
 \end{document}
 ```
 
