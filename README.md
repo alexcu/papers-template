@@ -1,36 +1,104 @@
 # LaTeX Template for SoftEng and CompSci Papers
 
-This is a template repository to bootstrap writing papers in LaTeX.
+This template repository helps you bootstrap writing papers in LaTeX.
 
-The template repository supports the following popular LaTeX classes used in
-Software Engineering venues:
+The template supports the following popular document classes that are used in popular software engineering and computer science venues:
 
-* [**`acmart`**](https://www.acm.org/binaries/content/assets/publications/consolidated-tex-template/acmart.pdf) - ACM journals and conferences. View source on [CTAN](https://ctan.org/tex-archive/macros/latex/contrib/acmart).
-* [**`IEEEtran`**](https://www.ieee.org/conferences/publishing/templates.html) - IEEE Transactions journals and conferences. View source on [CTAN](https://ctan.org/tex-archive/macros/latex/contrib/IEEEtran).
+* [**`acmart`**](https://www.acm.org/binaries/content/assets/publications/consolidated-tex-template/acmart.pdf) - ACM journals and conferences. View source on [CTAN](https://ctan.org/tex-archive/macros/latex/contrib/acmart). Readme available [here](https://www.acm.org/binaries/content/assets/publications/consolidated-tex-template/acmart.pdf).
+* [**`IEEEtran`**](https://www.ieee.org/conferences/publishing/templates.html) - IEEE journals and conferences. View source on [CTAN](https://ctan.org/tex-archive/macros/latex/contrib/IEEEtran). Readme available [here](https://ras.papercept.net/conferences/support/files/IEEEtran_HOWTO.pdf).
+* [**`llncs`**](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) - Springer Lecture Notes in Computer Science, conference proceedings. Readme is avaliable [here](https://cs.brown.edu/about/system/managed/latex/doc/llncs.pdf).
 * [**`elsarticle`**](https://www.elsevier.com/authors/author-schemas/latex-instructions) - Elsevier articles. View source on [CTAN](https://ctan.org/tex-archive/macros/latex/contrib/elsarticle).
-* [**`llncs`**](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) - Springer Lecture Notes in Computer Science, conference proceedings.
 * [**`IEEEcsmag`**](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) - IEEE Computer Society magazine articles.
 
-## Template Structure
+## Getting Started
 
-* Write your article within `main.tex`. You can choose to rename this file to your venue.
-* Make additional preamble modifications within `preamble.tex`.
-* Enter in appropriate frontmatter (e.g., authors, titles) within `frontmatter/[clsname].tex`. Use the frontmatter file suitable for your selected venue.
-* Place images within `images/` and, if you wish, tables within `tables/`.
-* Select which `cls` file you want within the `\documentclass{./cls/[clsname]}`. These are within `cls/` directory. Then add suitable options to this class.
-* Select which options for the selected class you want under `\documentclass[opt1,opt2...]{clsname}`.
-* Select appropriate BST files under `bst/`.
+Here are the basics with getting started:
 
-## Options for classes
+1. Write your article within `main.tex`. You can rename this file to the same as your repo, e.g.: `icse2020.tex`.
+1. Update the document class on line 1 with the document class and appropriate options suitable to your venue. The document class and associated options are usually provided by your venue's call for papers site.
+1. You should also include the `preamble.tex` file and make changes in the preamble within that file. The `preamble.tex` file is already included by default on line 3.
+1. Update the associated `frontmatter/` file on line 7 to the one associated with your document class. Each document class has its own frontmatter file. Examples are shown below.
+1. Edit the content of the frontmatter file imported with a new title, author(s), abstract and keywords. Additional publication details are included in this file as well.
 
-### Conference proceeding mode
+By default, the `acmart` document class and frontmatter file is used.
 
-### Journal article mode
+Below are a few examples to help guide you.
 
-### Draft mode
+### Conference Papers
+**ACM Conferences:**
+Use the `acmart` (ACM article) with the `sigconf` option enabled. The `authordraft` option should be enabled used whilst editing with coauthors, and when you submit your article this should be changed to `review`. Since most ACM conferences are double-blind, you should use `anonymous`.
+```latex
+\documentclass[sigconf,authordraft,anonymous]{acmart} % <- Replace line 1
+\input{preamble}
+\begin{document}
+\input{frontmatter/acmart-sigconf}                    % <- Replace line 7
+\end{document}
+```
 
-### Camere ready mode
+**IEEE Conferences:**
+Use the `IEEEtran` document class with the `conference` option enabled. The vast majority of IEEE papers also use the `10pt` option.
+```latex
+\documentclass[conference,10pt]{IEEEtran} % <- Replace line 1
+\input{preamble}
+\begin{document}
+\input{frontmatter/IEEEtran-conference}   % <- Replace line 7
+\end{document}
+```
 
-## BibTeX BST Files
+**Springer Lecture Notes in Computer Science articles:**
+Use the `llncs` for Springer Lecture Notes in Computer Science articles. You should use the `runningheads` option unless otherwise specified. <mark>Important!</mark> You must to download a [copy](https://www.win.tue.nl/~setalle/tex/llncs.cls) of the llncs class file and place into the root of your project as it is not pre-uploaded in Overleaf.
+```latex
+\documentclass[runningheads]{llncs} % <- Replace line 1
+\input{preamble}
+\begin{document}
+\input{frontmatter/llncs}           % <- Replace line 7
+\end{document}
+```
 
-- LLNCS: `splnc04.bst`
+### Journals & Magazine Articles
+**IEEE Journals:**
+Use the `IEEEtran` document class with the `journal` and `compsoc` options enabled for IEEE Journal articles. The vast majority of IEEE papers also use the `10pt` option.
+```latex
+\documentclass[journal,compsoc,10pt]{IEEEtran} % <- Replace line 1
+\input{preamble}
+\begin{document}
+\input{frontmatter/IEEEtran-journal-compsoc}   % <- Replace line 7
+\end{document}
+```
+
+**Elsevier Article:**
+Use the `elsarticle` document class with the `review` option enabled for a Elsevier journal article.
+```latex
+\documentclass[review]{elsarticle} % <- Replace line 1
+\input{preamble}
+\begin{document}
+\input{frontmatter/IEEEcsmag}      % <- Replace line 7
+\end{document}
+```
+
+**IEEE Computer Science Magazine:**
+Use the `IEEEcsmag` document class for an IEEE Computer magazine article.
+```latex
+\documentclass{IEEEcsmag}     % <- Replace line 1
+\input{preamble}
+\begin{document}
+\input{frontmatter/IEEEcsmag} % <- Replace line 7
+\end{document}
+```
+
+## Common Venues and Document Classes
+
+Here are a list of common venues with the document classes they use.
+
+* `acmart`: ESEC/FSE, ICSE, CHI.
+* `IEEEtrans` with `conference`: ESEC/FSE, ICSE, ICSME, ESEM.
+* `llncs`: ICWE.
+* `elsarticle`: IST, JSS.
+* `IEEEtrans` with `compsoc,journal`: TSE.
+* `IEEEcsmag`: IEEE Computer, IEEE Software.
+
+## Contributing
+
+If you find that one of your venues is not listed above, please let us know and we can add it in.
+
+If there are any issues with this document template, please raise them here on GitHub and/or contribute a fix via a pull request.
