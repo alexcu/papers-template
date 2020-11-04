@@ -1,11 +1,8 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title, Abstract and Keywords
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \title{Title of Paper}
 
 \begin{abstract}
-    The Abstract Goes Here. \BlindText
+    The Abstract Goes Here. \blindtext
 \end{abstract}
 \keywords{
     Keyword 1,
@@ -13,10 +10,7 @@
     Keyword 3
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author Information
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \author{First Author}
 \email{first.author@deakin.edu.au}
 \orcid{1111-2222-3333-4444}
@@ -58,21 +52,16 @@
 }
 
 % If you have more than 5 authors you may need to uncomment this
-%\settopmatter{authorsperrow=4}
+% \settopmatter{authorsperrow=4}
 
 % If you have many authors, you may need to provide a shorter version of your
 % collecitve names for the running headings.
 %\renewcommand{\shortauthors}{First Author et al.}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography Style
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{ACM-Reference-Format}
 
-\bibliographystyle{bst/ACM-Reference-Format}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Publication details provided by venue organisers
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\setcopyright{acmlicensed}
 %\acmPrice{15.00}
 %\acmDOI{10.1145/nnnnn.nnnnn}
@@ -82,11 +71,8 @@
 %\acmISBN{978-1-4503-7043-1/20/11}
 %\acmConference[ESEC/FSE '20]{Proceedings of the 28th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering}{November 8--13, 2020}{Virtual Event, USA}
 %\acmBooktitle{Proceedings of the 28th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE '20), November 8--13, 2020, Virtual Event, USA}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Generate your CCS XML at https://dl.acm.org/ccs
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{CCSXML}
 <ccs2012>
 <concept>
@@ -116,4 +102,5 @@
 \ccsdesc[500]{Software and its engineering~Software evolution}
 \ccsdesc[300]{Hardware~Error detection and error correction}
 \ccsdesc[100]{Computer systems organization~Client-server architectures}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle

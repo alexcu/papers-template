@@ -1,10 +1,17 @@
 % Standard Packages
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsmath,amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
 
 % Bibliography
-\usepackage[numbers,compress]{natbib}
-\renewcommand{\bibfont}{\footnotesize}
+\usepackage{etoolbox}
+\makeatletter
+\ifboolexpr{   test {\@ifclassloaded{acmart}}
+            or test {\@ifclassloaded{elsarticle}}}
+  {\usepackage{natbib}}
+  {\usepackage[numbers,compress]{natbib}}
+\makeatother
 
 % Graphics
 \usepackage{graphicx}
