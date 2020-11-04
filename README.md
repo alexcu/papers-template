@@ -22,6 +22,8 @@ Here are the basics with getting started:
 
 By default, the `acmart` document class and frontmatter file is used.
 
+**Remember, this template is just to help you get started. You will have to refer to the individual document class READMEs to make suitable changes appropriate to your particular venue.**
+
 Below are a few examples to help guide you.
 
 ### Conference Papers
