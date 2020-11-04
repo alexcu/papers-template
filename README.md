@@ -99,6 +99,9 @@ Here are a list of common venues with the document classes they use.
 
 ## Contributing
 
-If you find that one of your venues is not listed above, please let us know and we can add it in.
+Please raise an issue on GitHub and/or contribute a fix via a pull request if you:
 
-If there are any issues with this document template, please raise them here on GitHub and/or contribute a fix via a pull request.
+* find that a popular document class is not listed above;
+* find that one of your venues is not listed above;
+* if there are any issues with this document template;
+* have any suggestions!
